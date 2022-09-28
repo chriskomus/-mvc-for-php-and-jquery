@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  Options -Multiviews
+  RewriteEngine On
+
+  # Set to root url + /public
+  # IE: If site is located at www.example.com/mvc-for-php-and-jquery/ then RewriteBase should be: /mvc-for-php-and-jquery/public
+  RewriteBase /coding/mvc-for-php-and-jquery/public
+
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule  ^(.+)$ index.php?url=$1 [QSA,L]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>

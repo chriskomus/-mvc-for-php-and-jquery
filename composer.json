@@ -1,0 +1,17 @@
+{
+  "name": "chriskomus/mvc-for-php-and-jquery",
+  "description": "A PHP, Bootstrap, and jQuery based MVC (model, controller, view) framework using a bare minimum amount of packages. Lightweight and fast. Handles authentication, database connectivity, displaying datagrids or tiles.",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0 license",
+  "authors": [
+    {
+      "name": "Chris Komus",
+      "email": "ckomus@gmail.com"
+    }
+  ],
+  "require": {
+    "gumlet/php-image-resize": "2.0.*",
+    "ext-pdo": "*",
+    "ext-fileinfo": "*",
+  }
+}

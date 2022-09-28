@@ -1,0 +1,113 @@
+/*
+ * Copyright (c) 2022 Chris Komus - GNU GPLv3
+ * https://github.com/chriskomus/
+ */
+
+body {
+    padding-top: 70px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar {
+    padding-bottom: .7rem;
+}
+
+.navbar-brand {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+}
+
+.custom-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #011627;
+}
+
+.no-underline {
+    border-bottom: none;
+}
+
+.custom-tooltip .custom-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms;
+    min-width: 120px;
+    /* background-color: #011627; */
+    background-color: #325d88;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.custom-tooltip .thumbnail {
+    width: 210px;
+    left: 10%;
+}
+
+.custom-tooltip .thumbnail-load {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 10px;
+}
+
+.custom-tooltip .custom-tooltip-text img {
+    border-radius: 6px;
+    z-index: 50;
+}
+
+.custom-tooltip:hover .custom-tooltip-text {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #325d88 transparent transparent;
+    opacity: 0.8;
+    transition: opacity 800ms;
+}
+
+.custom-tooltip:hover .custom-tooltip-text {
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 400ms;
+}
+
+.custom-tooltip:hover .thumbnail {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.grid-container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    text-align: center;
+    margin-top: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pagination > li a {
+    min-width: 2.5em;
+    text-align: center;
+}
+
+.greyscale-img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
